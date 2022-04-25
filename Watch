@@ -1,0 +1,15 @@
+class A {
+   // all member variables and member functions are defined.
+   // Given that A deleted both copy constructor and 
+   // overloaded assignment operator for some trivial reasons
+   A(const A&) = delete;
+   A& operator=(const A &) = delete;
+};
+
+template<typename T>
+void swap (T &a, T &b) {
+    T temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
